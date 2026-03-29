@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "services": "Leistungen",
+    "portfolio": "Portfolio",
+    "about": "Über mich",
+    "contact": "Kontakt",
+    "cta": "Kostenloses Erstgespräch"
+  },
+  "hero": {
+    "badge": "KI-gestützte Webentwicklung",
+    "headline": "Ich baue Websites, die dir Kunden bringen",
+    "subheadline": "Moderne, schnelle, conversion-optimierte Websites für Unternehmen, die wachsen wollen. Mit KI-gestützter Präzision in Tagen gebaut, nicht Wochen.",
+    "cta_primary": "Kostenloses Strategiegespräch buchen",
+    "cta_secondary": "Meine Arbeit ansehen",
+    "stats_websites": "Websites gebaut",
+    "stats_fast": "Schnellere Lieferung",
+    "stats_satisfaction": "Kundenzufriedenheit"
+  },
+  "services": {
+    "title": "Was ich für dich baue",
+    "subtitle": "Jedes Unternehmen ist anders. Jede Website sollte es auch sein.",
+    "card1_title": "Landing Pages",
+    "card1_desc": "Hochkonvertierende Einzelseiten, die Besucher zu Kunden machen. Perfekt für Kampagnen, Produktlaunches oder deine Hauptpräsenz.",
+    "card2_title": "Business Websites",
+    "card2_desc": "Komplette Websites mit mehreren Seiten, Kontaktformularen und allem, was dein Unternehmen braucht, um professionell aufzutreten.",
+    "card3_title": "Web-Applikationen",
+    "card3_desc": "Individuelle Tools, Dashboards und interaktive Anwendungen. Von Buchungssystemen bis zu internen Tools, genau für deine Bedürfnisse gebaut.",
+    "card4_title": "KI-Integration",
+    "card4_desc": "Smarte Chatbots, automatisierte Inhalte, KI-gestützte Features. Gib deinem Unternehmen einen technologischen Vorsprung.",
+    "cta": "Jedes Projekt startet mit einem kostenlosen Strategiegespräch. Kein Druck, keine Verpflichtungen.",
+    "cta_button": "Lass uns über dein Projekt sprechen"
+  },
+  "portfolio": {
+    "title": "Aktuelle Projekte",
+    "subtitle": "Echte Projekte, echte Ergebnisse.",
+    "project1_title": "Fitness Coach Plattform",
+    "project1_desc": "Moderne Landing Page für einen Fitness Coach mit Buchungsintegration und Mobile-First Design.",
+    "project1_tag1": "Next.js",
+    "project1_tag2": "Tailwind",
+    "project1_tag3": "Responsive",
+    "project2_title": "Lokale Business Website",
+    "project2_desc": "Saubere, schnelle Website für ein lokales Dienstleistungsunternehmen. Optimiert für Google und mobile Nutzer.",
+    "project2_tag1": "SEO",
+    "project2_tag2": "Mobile-First",
+    "project2_tag3": "Fast Loading",
+    "view_project": "Projekt ansehen",
+    "coming_soon": "Weitere Projekte folgen bald"
+  },
+  "about": {
+    "title": "Warum mit mir arbeiten?",
+    "p1": "Ich bin Samuel, ein 20-jähriger Entwickler aus Deutschland, der Websites mit KI-gestützten Tools baut. Das bedeutet, ich liefere in Tagen, wofür traditionelle Agenturen Wochen brauchen, zu einem Bruchteil der Kosten.",
+    "p2": "Ich baue nicht nur schöne Websites. Ich baue Websites, die funktionieren, die schnell laden, die auf Google ranken und die dir tatsächlich Kunden bringen.",
+    "trust1_title": "Blitzschnell",
+    "trust1_desc": "Die meisten Projekte in 5-7 Tagen geliefert",
+    "trust2_title": "Moderne Technik",
+    "trust2_desc": "Gebaut mit den neuesten Frameworks und KI-Tools",
+    "trust3_title": "Faire Preise",
+    "trust3_desc": "Agenturqualität ohne den Agenturpreis",
+    "trust4_title": "Voller Support",
+    "trust4_desc": "Ich verschwinde nicht nach dem Launch. Laufender Support inklusive."
+  },
+  "contact": {
+    "title": "Lass uns was Großartiges bauen",
+    "subtitle": "Bereit, dein Business online zu bringen? Schreib mir eine Nachricht und ich melde mich innerhalb von 24 Stunden.",
+    "name_label": "Dein Name",
+    "name_placeholder": "Max Mustermann",
+    "email_label": "E-Mail",
+    "email_placeholder": "max@beispiel.de",
+    "message_label": "Erzähl mir von deinem Projekt",
+    "message_placeholder": "Ich brauche eine Website für mein Unternehmen...",
+    "submit": "Nachricht senden",
+    "or": "Oder erreiche mich direkt",
+    "instagram": "Schreib mir auf Instagram"
+  },
+  "footer": {
+    "tagline": "Das Web von morgen, heute gebaut.",
+    "rights": "Alle Rechte vorbehalten."
+  }
+}

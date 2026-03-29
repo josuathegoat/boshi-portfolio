@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Book Free Call"
+  },
+  "hero": {
+    "badge": "AI-Powered Web Development",
+    "headline": "I Build Websites That Bring You Customers",
+    "subheadline": "Modern, fast, conversion-optimized websites for businesses that want to grow. Built with AI-powered precision in days, not weeks.",
+    "cta_primary": "Book Free Strategy Call",
+    "cta_secondary": "See My Work",
+    "stats_websites": "Websites Built",
+    "stats_fast": "Faster Delivery",
+    "stats_satisfaction": "Client Satisfaction"
+  },
+  "services": {
+    "title": "What I Build For You",
+    "subtitle": "Every business is different. Every website should be too.",
+    "card1_title": "Landing Pages",
+    "card1_desc": "High-converting single pages that turn visitors into customers. Perfect for campaigns, product launches, or your main online presence.",
+    "card2_title": "Business Websites",
+    "card2_desc": "Complete websites with multiple pages, contact forms, and everything your business needs to look professional and attract clients.",
+    "card3_title": "Web Applications",
+    "card3_desc": "Custom tools, dashboards, and interactive applications. From booking systems to internal tools, built exactly for your needs.",
+    "card4_title": "AI Integration",
+    "card4_desc": "Smart chatbots, automated content, AI-powered features. Give your business a technological edge that your competitors don't have.",
+    "cta": "Every project starts with a free strategy call. No pressure, no obligations.",
+    "cta_button": "Let's Talk About Your Project"
+  },
+  "portfolio": {
+    "title": "Recent Work",
+    "subtitle": "Real projects, real results.",
+    "project1_title": "Fitness Coach Platform",
+    "project1_desc": "Modern landing page for a fitness coach with booking integration and mobile-first design.",
+    "project1_tag1": "Next.js",
+    "project1_tag2": "Tailwind",
+    "project1_tag3": "Responsive",
+    "project2_title": "Local Business Website",
+    "project2_desc": "Clean, fast website for a local service business. Optimized for Google and mobile users.",
+    "project2_tag1": "SEO",
+    "project2_tag2": "Mobile-First",
+    "project2_tag3": "Fast Loading",
+    "view_project": "View Project",
+    "coming_soon": "More projects coming soon"
+  },
+  "about": {
+    "title": "Why Work With Me?",
+    "p1": "I'm Samuel, a 20-year-old developer from Germany who builds websites with AI-powered tools. This means I deliver in days what traditional agencies take weeks for, at a fraction of the cost.",
+    "p2": "I don't just build pretty websites. I build websites that work, that load fast, that rank on Google, and that actually bring you customers.",
+    "trust1_title": "Lightning Fast",
+    "trust1_desc": "Most projects delivered within 5-7 days",
+    "trust2_title": "Modern Tech",
+    "trust2_desc": "Built with the latest frameworks and AI tools",
+    "trust3_title": "Fair Pricing",
+    "trust3_desc": "Agency quality without the agency price tag",
+    "trust4_title": "Full Support",
+    "trust4_desc": "I don't disappear after launch. Ongoing support included."
+  },
+  "contact": {
+    "title": "Let's Build Something Great",
+    "subtitle": "Ready to take your business online? Send me a message and I'll get back to you within 24 hours.",
+    "name_label": "Your Name",
+    "name_placeholder": "John Doe",
+    "email_label": "Email",
+    "email_placeholder": "john@example.com",
+    "message_label": "Tell me about your project",
+    "message_placeholder": "I need a website for my business...",
+    "submit": "Send Message",
+    "or": "Or reach me directly",
+    "instagram": "DM me on Instagram"
+  },
+  "footer": {
+    "tagline": "Building the web of tomorrow, today.",
+    "rights": "All rights reserved."
+  }
+}
