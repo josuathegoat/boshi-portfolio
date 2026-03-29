@@ -69,6 +69,8 @@
     "message_label": "Erzähl mir von deinem Projekt",
     "message_placeholder": "Ich brauche eine Website für mein Unternehmen...",
     "submit": "Nachricht senden",
+    "success": "Nachricht gesendet! Ich melde mich innerhalb von 24 Stunden.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
     "or": "Oder erreiche mich direkt",
     "instagram": "Schreib mir auf Instagram"
   },

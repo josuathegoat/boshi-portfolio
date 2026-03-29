@@ -69,6 +69,8 @@
     "message_label": "Tell me about your project",
     "message_placeholder": "I need a website for my business...",
     "submit": "Send Message",
+    "success": "Message sent! I'll get back to you within 24 hours.",
+    "error": "Something went wrong. Please try again.",
     "or": "Or reach me directly",
     "instagram": "DM me on Instagram"
   },

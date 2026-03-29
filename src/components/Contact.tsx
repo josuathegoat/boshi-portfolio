@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useRef, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Send, Mail } from "lucide-react";
+import { Send, Mail, CheckCircle, AlertCircle } from "lucide-react";
 
 function InstagramIcon({ size = 16 }: { size?: number }) {
   return (
@@ -15,35 +15,49 @@ function InstagramIcon({ size = 16 }: { size?: number }) {
   );
 }
 
+type Status = "idle" | "sending" | "success" | "error";
+
 export default function Contact() {
   const t = useTranslations("contact");
-  const [sending, setSending] = useState(false);
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
+  const formRef = useRef<HTMLFormElement>(null);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSending(true);
+    setStatus("sending");
 
     const data = new FormData(e.currentTarget);
-    console.log("Contact form:", {
-      name: data.get("name"),
-      email: data.get("email"),
-      message: data.get("message"),
-    });
 
-    // TODO: wire up email sending
-    await new Promise((r) => setTimeout(r, 1000));
-    setSending(false);
-    setSent(true);
-    e.currentTarget.reset();
-    setTimeout(() => setSent(false), 4000);
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+          subject: "New Portfolio Inquiry from Boshi.AI",
+          name: data.get("name"),
+          email: data.get("email"),
+          message: data.get("message"),
+        }),
+      });
+
+      const json = await res.json();
+
+      if (json.success) {
+        setStatus("success");
+        formRef.current?.reset();
+        setTimeout(() => setStatus("idle"), 5000);
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
     <section id="contact" className="relative py-28 sm:py-36">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-blue/20 to-transparent" />
-
-      {/* Subtle background shift */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-brand-blue/[0.02] to-transparent" />
 
       <div className="relative mx-auto max-w-xl px-6">
@@ -65,6 +79,7 @@ export default function Contact() {
 
         {/* Form */}
         <motion.form
+          ref={formRef}
           onSubmit={handleSubmit}
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -126,16 +141,29 @@ export default function Contact() {
             />
           </div>
 
+          {/* Status messages */}
+          {status === "success" && (
+            <div className="flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/[0.06] px-4 py-3 text-sm text-emerald-400">
+              <CheckCircle size={16} className="flex-shrink-0" />
+              {t("success")}
+            </div>
+          )}
+
+          {status === "error" && (
+            <div className="flex items-center gap-2 rounded-xl border border-red-500/20 bg-red-500/[0.06] px-4 py-3 text-sm text-red-400">
+              <AlertCircle size={16} className="flex-shrink-0" />
+              {t("error")}
+            </div>
+          )}
+
           {/* Submit */}
           <button
             type="submit"
-            disabled={sending}
-            className="flex w-full items-center justify-center gap-2 rounded-xl bg-brand-blue py-3.5 text-[15px] font-semibold text-white transition-all duration-300 hover:bg-blue-500 hover:shadow-[0_0_32px_rgba(59,130,246,0.35)] disabled:cursor-not-allowed disabled:opacity-50"
+            disabled={status === "sending"}
+            className="flex w-full items-center justify-center gap-2 rounded-xl bg-brand-blue py-3.5 text-[15px] font-semibold text-white transition-all duration-300 ease-out hover:bg-blue-500 hover:shadow-[0_0_32px_rgba(59,130,246,0.35)] disabled:cursor-not-allowed disabled:opacity-50"
           >
-            {sending ? (
+            {status === "sending" ? (
               <div className="h-5 w-5 animate-spin rounded-full border-2 border-white/30 border-t-white" />
-            ) : sent ? (
-              "✓"
             ) : (
               <>
                 {t("submit")}
@@ -159,14 +187,14 @@ export default function Contact() {
               href="https://instagram.com/boshi.ai"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-brand-light/40 transition-colors hover:text-brand-blue"
+              className="inline-flex items-center gap-2 text-sm font-medium text-brand-light/40 transition-colors duration-200 ease-out hover:text-brand-blue"
             >
               <InstagramIcon size={16} />
               {t("instagram")}
             </a>
             <a
               href="mailto:hello@boshi.ai"
-              className="inline-flex items-center gap-2 text-sm font-medium text-brand-light/40 transition-colors hover:text-brand-blue"
+              className="inline-flex items-center gap-2 text-sm font-medium text-brand-light/40 transition-colors duration-200 ease-out hover:text-brand-blue"
             >
               <Mail size={16} />
               hello@boshi.ai
